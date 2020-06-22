@@ -1,0 +1,48 @@
+.brandsTransition {
+  position: relative;
+  overflow-x: hidden;
+}
+
+.pageSliderRight-enter {
+  transform: translate3d(-100%, 0, 0);
+}
+
+.pageSliderRight-enter.pageSliderRight-enter-active {
+  transform: translate3d(0, 0, 0);
+  transition: all 1500ms;
+}
+.pageSliderRight-exit {
+  transform: translate3d(0, 0, 0);
+}
+
+.pageSliderRight-exit.pageSliderRight-exit-active {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate3d(100%, 0, 0);
+  transition: all 1500ms;
+}
+
+.pageSliderLeft-enter {
+  transform: translate3d(100%, 0, 0);
+}
+
+.pageSliderLeft-enter.pageSliderLeft-enter-active {
+  transform: translate3d(0, 0, 0);
+  transition: all 1500ms;
+}
+.pageSliderLeft-exit {
+  transform: translate3d(0, 0, 0);
+}
+
+.pageSliderLeft-exit.pageSliderLeft-exit-active {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate3d(-100%, 0, 0);
+  transition: all 1500ms;
+}
+
+.hiddenSideAnimationEffect-exit {
+  display: none;
+}

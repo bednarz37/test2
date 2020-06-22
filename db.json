@@ -1,0 +1,59 @@
+{
+  "brandA": {
+    "name": "brandA",
+    "title": "Foods",
+    "description": "“All you need is love. But a little chocolate now and then doesn’t hurt.” – Charles M. Schulz",
+    "products": [
+      {
+        "title": "Smoothie with chia seeds",
+        "description": "Glass of red strawberry smoothie with chia seeds, served with retro cocktail tube, fresh mint and strawberries over wooden table",
+        "price": 25.26
+      },
+      {
+        "title": "Yogurt",
+        "description": "Homemade yogurt with raspberry and mint",
+        "price": 27.61
+      },
+      {
+        "title": "Fresh blueberries",
+        "description": "Healthy breakfast. berry crumble with fresh blueberries, raspberries, strawberries, almond, walnuts, pecans, yogurt, and mint in ceramic plates over white wooden surface, top view",
+        "price": 21.01
+      },
+      {
+        "title": "Smashed avocado",
+        "description": "Vegan sandwiches with smashed avocado, tomatoes and radish. top view",
+        "price": 25.88
+      },
+      {
+        "title": "Strawberries",
+        "description": "Healthy breakfast set. rice cereal or porridge with fresh strawberry, apricots, almond and honey over white rustic wood backdrop, top view, \u0000",
+        "price": 15.13
+      }
+    ]
+  },
+  "brandB": {
+    "name": "brandB",
+    "title": "Books",
+    "description": "“All you need is love. But a little chocolate now and then doesn’t hurt.” – Charles M. Schulz",
+    "products": [
+      {
+        "title": "Eloquent JavaScript, Second Edition",
+        "author": "Marijn Haverbeke",
+        "description": "JavaScript lies at the heart of almost every modern web application, from social apps to the newest browser-based games. Though simple for beginners to pick up and play with, JavaScript is a flexible, complex language that you can use to build full-scale applications.",
+        "price": 10
+      },
+      {
+        "title": "Learning JavaScript Design Patterns",
+        "author": "Addy Osmani",
+        "description": "With Learning JavaScript Design Patterns, you'll learn how to write beautiful, structured, and maintainable JavaScript by applying classical and modern design patterns to the language. If you want to keep your code efficient, more manageable, and up-to-date with the latest best practices, this book is for you.",
+        "price": 20
+      },
+      {
+        "title": "Speaking JavaScript",
+        "author": "Axel Rauschmayer",
+        "description": "Like it or not, JavaScript is everywhere these days-from browser to server to mobile-and now you, too, need to learn the language or dive deeper than you have. This concise book guides you into and through JavaScript, written by a veteran programmer who once found himself in the same position.",
+        "price": 30
+      }
+    ]
+  }
+}
