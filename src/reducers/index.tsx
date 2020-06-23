@@ -1,6 +1,8 @@
 import { combineReducers } from 'redux';
 import brandsReducer from './brands';
+import authenticationReducer from './authentication';
 
 export default combineReducers({
-  brands: brandsReducer
+  brands: brandsReducer,
+  authentication: authenticationReducer
 });

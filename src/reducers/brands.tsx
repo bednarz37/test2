@@ -7,7 +7,6 @@ const initialState = fromJS({
 });
 
 const brands = (state = initialState, action: any) => {
-  console.log('action in reducer', action);
   switch (action.type) {
     case BRAND_ACTIONS.FETCH_BRAND_ACTION:
       return state.setIn([action.brand, 'isLoading'], true);

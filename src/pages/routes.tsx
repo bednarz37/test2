@@ -27,65 +27,51 @@ const getSlideClassName = (pathArr: any) => {
   return '';
 };
 
-const isAnimated = (pathArr: any) => {
-  if (pathArr.length > 1) {
-    return false;
-  }
-  return true;
-};
-
-const routes = [
-  { path: '/brandA', name: 'BrandA', Component: BrandA },
-  { path: '/brandB', name: 'BrandB', Component: BrandB }
-];
-
 const Routes = () => {
   return (
-    <div className="App">
-      <Router>
-        <Route
-          render={({ location }) => {
-            const isAnime = isAnimated(getPathDepth(location));
+    <Router>
+      <Route
+        render={({ location }: any) => {
+          const isAnime = location.state && location.state.slideAnimation;
 
-            return (
-              <TransitionGroup
-                className="brandsTransition noTransition"
-                childFactory={child =>
-                  React.cloneElement(child, {
-                    classNames: isAnime
-                      ? getSlideClassName(getPathDepth(location))
-                      : 'hiddenSideAnimationEffect',
-                    timeout: isAnime ? 1500 : 1500,
-                    enter: isAnime,
-                    leave: isAnime
-                  })
+          return (
+            <TransitionGroup
+              className="brandsTransition noTransition"
+              childFactory={child =>
+                React.cloneElement(child, {
+                  classNames: isAnime
+                    ? getSlideClassName(getPathDepth(location))
+                    : 'hiddenSideAnimationEffect',
+                  timeout: isAnime ? 1500 : 1500,
+                  enter: isAnime,
+                  leave: isAnime
+                })
+              }
+            >
+              <CSSTransition
+                key={location.key}
+                timeout={isAnime ? 1500 : 1500}
+                classNames={
+                  isAnime
+                    ? getSlideClassName(getPathDepth(location))
+                    : 'hiddenSideAnimationEffect'
                 }
+                mountOnEnter={true}
+                unmountOnExit={true}
               >
-                <CSSTransition
-                  key={location.key}
-                  timeout={isAnime ? 1500 : 1500}
-                  classNames={
-                    isAnime
-                      ? getSlideClassName(getPathDepth(location))
-                      : 'hiddenSideAnimationEffect'
-                  }
-                  mountOnEnter={true}
-                  unmountOnExit={true}
-                >
-                  <div className="routerWrapper">
-                    <Switch location={location}>
-                      <Route path="/brandA" component={BrandA} />
-                      <Route path="/brandB" component={BrandB} />
-                      <Redirect to="/brandA" />
-                    </Switch>
-                  </div>
-                </CSSTransition>
-              </TransitionGroup>
-            );
-          }}
-        />
-      </Router>
-    </div>
+                <div className="routerWrapper">
+                  <Switch location={location}>
+                    <Route path="/brandA" component={BrandA} />
+                    <Route path="/brandB" component={BrandB} />
+                    <Redirect to="/brandA/offer" />
+                  </Switch>
+                </div>
+              </CSSTransition>
+            </TransitionGroup>
+          );
+        }}
+      />
+    </Router>
   );
 };
 

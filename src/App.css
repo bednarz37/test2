@@ -16,7 +16,10 @@ body,
   height: 100%;
 }
 
-.App {
+.App,
+.brandsTransition,
+.routerWrapper {
   display: flex;
   flex: 1;
+  flex-direction: column;
 }
